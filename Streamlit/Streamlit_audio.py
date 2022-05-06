@@ -18,7 +18,7 @@ import os
 class StreamlitApp:
 
 
-	sim_df_names = pd.read_csv("update.csv", "rb")
+	#sim_df_names = pd.read_csv("update.csv", "rb")
 
 
 	@st.cache
