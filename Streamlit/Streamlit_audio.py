@@ -5,8 +5,8 @@ import numpy as np
 #import scipy as sc
 #from audio_feature.audio_featurizer import audio_process, spectrogram_plot
 #from models.load_model import model_loader
-from sklearn.metrics.pairwise import cosine_similarity
-from sklearn import manifold
+#from sklearn.metrics.pairwise import cosine_similarity
+#from sklearn import manifold
 #from sklearn import preprocessing
 #from pydub import AudioSegment
 import os
