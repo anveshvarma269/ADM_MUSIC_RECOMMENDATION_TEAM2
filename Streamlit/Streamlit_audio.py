@@ -48,8 +48,12 @@ class StreamlitApp:
 		#     ax[i].set_axis_off()
 		st.subheader("Similar Music you may want to Listen")
 		for i, aud in enumerate(sorted_neighbors[:max_results]): #list of images
+			# st.write(aud[0])
+			st.audio(aud[0], format="audio/wav", start_time=0)
+			
 
-			st.audio(self.audio[aud[0]], width=100)#displaying all images
+
+			# st.audio(self.audio[aud[0]], width=100)#displaying all images
 	    
 
 
@@ -74,7 +78,8 @@ class StreamlitApp:
 			#aud = self.load_audio(audio_file) #line 21
 			aud = st.audio(audio_file, format = 'audio/wav')
 			# To View Uploaded Image
-			st.audio(aud, format=["wav"])
+			st.audio(audio_file, format="audio/wav", start_time=0)
+
 			self.search_by_style(audio_file.name, k) #line27
 	
 
