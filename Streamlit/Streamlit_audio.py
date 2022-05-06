@@ -2,7 +2,7 @@ import streamlit as st
 import IPython.display as ipd
 import pandas as pd
 import numpy as np
-import scipy as sc
+#import scipy as sc
 from audio_feature.audio_featurizer import audio_process, spectrogram_plot
 from models.load_model import model_loader
 from sklearn.metrics.pairwise import cosine_similarity
