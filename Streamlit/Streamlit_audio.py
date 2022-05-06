@@ -2,70 +2,85 @@ import streamlit as st
 import IPython.display as ipd
 import pandas as pd
 import numpy as np
-#import scipy as sc
+import scipy as sc
+import pickle
 #from audio_feature.audio_featurizer import audio_process, spectrogram_plot
 #from models.load_model import model_loader
-#from sklearn.metrics.pairwise import cosine_similarity
-#from sklearn import manifold
-#from sklearn import preprocessing
-#from pydub import AudioSegment
+#import cosine_similarity
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn import manifold
+from sklearn import preprocessing
+from pydub import AudioSegment
 import os
-
-
+from scipy.io import wavfile
 
 
 
 class StreamlitApp:
 
 
-	#sim_df_names = pd.read_csv("update.csv", "rb")
+	# @st.cache
+	def __init__(self):
+		self.audio_style_embeddings = pickle.load(open("audio_style_embeddings.pickle","rb"))
+		self.audio = pickle.load(open("audio.pickle","rb"))
 
+		print(len(self.audio_style_embeddings))
+		print(len(self.audio))
 
 	@st.cache
-	def load_audio(self,audio_file):
-		aud = Audio.open(image_file)
+	def load_audio(self,audio_file): #opening
+		aud = st.open(audio_file)
 		return aud
 
-	def find_similar_songs(name):
-    # Find songs most similar to another song
-	    series = sim_df_names[name].sort_values(ascending = False)
+
+	def search_by_style(self, reference_audio, max_results):
+		v0 = self.audio_style_embeddings[reference_audio]
+		distances = {}
+		for k,v in self.audio_style_embeddings.items():
+			d = sc.spatial.distance.cosine(v0, v)
+			distances[k] = d
+
+		sorted_neighbors = sorted(distances.items(), key=lambda x: x[1], reverse=False)
+		print("sorted_neighbors ===",sorted_neighbors)
+		# f, ax = plt.subplots(1, max_results, figsize=(16, 8))
+		# for i, img in enumerate(sorted_neighbors[:max_results]):
+		#     ax[i].imshow(images[img[0]])
+		#     ax[i].set_axis_off()
+		st.subheader("Similar Music you may want to Listen")
+		for i, aud in enumerate(sorted_neighbors[:max_results]): #list of images
+
+			st.audio(self.audio[aud[0]], width=100)#displaying all images
 	    
-	    # If we remove cosine similarity == 1 (songs will always have the best match with themselves)
-	    series = series.drop(name)
-	    
-	    # Display the 5 top matches 
-	    print("\n*******\nSimilar songs to ", name)
-	    print(series.head(5))
+
 
 
 	def asearch(self):
-		st.header("Music Recommendation System")
+		st.title("Music Recommendation System")
 		st.write("-------------------------------------------------------------------------------------------------")
-		st.image(
-		"https://q5n8c8q9.rocketcdn.me/wp-content/uploads/2018/08/The-20-Best-Royalty-Free-Music-Sites-in-2021.png.webp",
-		width=800 
-		)
-		st.write("Upload any music and get similar music:")
 
-
-		st.subheader("UPLOAD MUSIC FILE: ")
-		audio_file = st.file_uploader("Upload Music", type=["wav","mp3"])
-		k = st.slider('How many similar songs do you want to listen?', 1, 6,)
+		
+		st.subheader("UPLOAD AN AUDIO FILE: ")
+		audio_file = st.file_uploader("Upload Audio", type=["wav"])
+		k = st.slider('How many similar audio do you want to listen?', 1, 6, 1)
 		
 
-		st.write("Songs list ===>"+str(k))
+		st.write("K value selected ===>"+str(k))
 		if audio_file is not None:
 
 			# To See details
 			file_details = {"filename":audio_file.name, "filetype":audio_file.type,
-						  "filesize":audio_file.size, "audiofile":audio_file}
+						  "filesize":audio_file.size}
 			st.write(file_details)
-			aud = self.load_audio(audio_file)
-			# To View Uploaded audio
-			#st.audio(aud,width=250)
-			self.find_similar_songs(audio_file.name, k)
+			#aud = self.load_audio(audio_file) #line 21
+			aud = st.audio(audio_file, format = 'audio/wav')
+			# To View Uploaded Image
+			st.audio(aud, format=["wav"])
+			self.search_by_style(audio_file.name, k) #line27
+	
+
 
 if __name__ == "__main__":
+
 	
 	obj  = StreamlitApp()
 	# obj.load_embeddings()
