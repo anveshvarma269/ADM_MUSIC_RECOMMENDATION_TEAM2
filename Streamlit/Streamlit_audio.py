@@ -7,8 +7,8 @@ import numpy as np
 #from models.load_model import model_loader
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn import manifold
-from sklearn import preprocessing
-from pydub import AudioSegment
+#from sklearn import preprocessing
+#from pydub import AudioSegment
 import os
 
 
