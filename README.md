@@ -37,7 +37,14 @@ The digitization of music, as well as the emergence of online streaming platform
 ·   	Librosa
 
 
-·   	Splitting the data into 7:3 ratio for testing and training the data
+·   	Audio Featurizer 
+
+
+·   	Cosine similarity
+
+
+·   	Wavefile
+
  
 **Use Cases**
 
