@@ -76,9 +76,18 @@ The dataset consists of a collection of 10 genres with 100 audio files each, all
 
 ·Deploy the application using stream lit to demonstrate the prediction and recommendation results, dashboards including analysis
 
+
+
 **WEB APPLICATION - HOSTED ON STREAMLIT**
 
 https://share.streamlit.io/anveshvarma269/adm_music_recommendation_team2/main/app.py
+
+
+
+
+**Video Demo**
+
+https://www.youtube.com/watch?v=jUZpCZCTqaQ&ab_channel=anveshvarma
 
 
 
