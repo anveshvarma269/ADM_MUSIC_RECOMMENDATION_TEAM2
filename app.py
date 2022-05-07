@@ -347,10 +347,10 @@ class StreamlitApp:
         st.write()
 
 
-    @st.cache
-    def load_audio(self,audio_file): #opening
-        #aud = st.open(audio_file)
-        #return aud
+#    @st.cache
+#    def load_audio(self,audio_file): #opening
+#        aud = st.open(audio_file)
+#        return aud
 
 
     def search_by_style(self, reference_audio, max_results):
