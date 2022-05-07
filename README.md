@@ -1,5 +1,5 @@
 # ADM_MUSIC_RECOMMENDATION_TEAM2
-OVERVIEW
+Overview
  
 The digitization of music, as well as the emergence of online streaming platforms and mobile apps, has transformed how we consume music. Much of the music we listen to nowadays is based on our personal preferences. Each person has their own musical taste and preferred genre based on a variety of factors. This sparked the idea for a music recommendation system to assist people in discovering music they enjoy based on what they've already heard.
  
