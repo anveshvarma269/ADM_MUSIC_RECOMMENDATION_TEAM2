@@ -6,7 +6,7 @@
 
 **OVERVIEW**
  
-The digitization of music, as well as the emergence of online streaming platforms and mobile apps, has transformed how we consume music. Much of the music we listen to nowadays is based on our personal preferences. Each person has their own musical taste and preferred genre based on a variety of factors. This sparked the idea for a music recommendation system to assist people in discovering music they enjoy based on what they've already heard.
+The digitization of music, as well as the emergence of online streaming platforms and mobile apps, has transformed how we consume music. Much of the music  we listen to nowadays is based on our personal preferences. Each person has their own musical taste and preferred genre based on a variety of factors. This sparked the idea for a music recommendation system to assist people in discovering music they enjoy based on what they've already heard.
  
 **GOALS**
  
@@ -72,13 +72,13 @@ The dataset consists of a collection of 10 genres with 100 audio files each, all
 ·Feature Extraction: Chroma frequencies, Zero-crossing rates,Spectral - Centroid to classify music into multiple genres
 
 
-·Model Building : For Classification we plan to use the following models such as Decision trees, Random Forest Classification, Logistic Regression
+·Model Building : For Classification we used the following models such as Decision trees, Random Forest Classification, Logistic Regression and XGBoost
 
 
 ·Recommender Systems enable us for any given vector to find the best similarity, ranked in descending order, from the best match to the least best match   and for audio files this will be done by cosine similarity
 
 
-·Design of a pipeline and system to implement this approach and discussion on the system’s capabilities
+·Designed a pipeline and system to implement this approach and discussion on the system’s capabilities
 
 
 ·Deploy the application using stream lit to demonstrate the prediction and recommendation results, dashboards including analysis
