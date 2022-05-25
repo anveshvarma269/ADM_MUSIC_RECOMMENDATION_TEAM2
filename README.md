@@ -92,10 +92,6 @@ https://share.streamlit.io/anveshvarma269/adm_music_recommendation_team2/main/ap
 
 
 
-**Video Demo**
-
-https://www.youtube.com/watch?v=jUZpCZCTqaQ&ab_channel=anveshvarma
-
 
 
 
