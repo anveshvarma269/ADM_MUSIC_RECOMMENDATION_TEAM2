@@ -33,7 +33,7 @@ st.markdown(
     """<h1 style='text-align: center; color: white;font-size:60px;margin-top:-50px;'>Music Recommender and Genre Identifier</h1><h1 style='text-align: center; color: white;font-size:20px;margin-top:-30px;'></h1>""",
     unsafe_allow_html=True)
 
- radio = st.sidebar.radio("Select format of audio file", options=['mp3', 'wav'])
+radio = st.sidebar.radio("Select format of audio file", options=['mp3', 'wav'])
 
 
 
