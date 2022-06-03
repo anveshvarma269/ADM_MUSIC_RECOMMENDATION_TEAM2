@@ -14,7 +14,33 @@ The digitization of music, as well as the emergence of online streaming platform
 
 
 ·   	To Classify music into multiple genres and give recommendations to the user based on the genre and type of music inputted
- 
+
+
+**Environment Setup**
+
+Anaconda Installation
+
+Install Anaconda:
+Please go to the Anaconda.com/downloads site.
+Select the respective platform: Windows/Mac/Linux.
+Download the .exe installer.
+Open and execute the .exe installer.
+Launch Anaconda Navigator.
+Click on the Install Jupyter Notebook Button.
+Beginning the Installation.
+Upon installation, open jupyter notebook.
+
+Python Libraries
+
+Open Anaconda console and install the following libraries
+
+pip install scikit-learn
+pip install tensorflow
+pip install keras
+conda install -c conda-forge xgboost
+pip install librosa
+pip install pydub 
+pip install seaborn
  
 **MAIN REQUIREMENTS**
 
@@ -72,7 +98,7 @@ The dataset consists of a collection of 10 genres with 100 audio files each, all
 ·Feature Extraction: Chroma frequencies, Zero-crossing rates,Spectral - Centroid to classify music into multiple genres
 
 
-·Model Building : For Classification we used the following models such as Decision trees, Random Forest Classification, Logistic Regression and XGBoost
+·Model Building : 1. XGBoost technique 2. Convolutional Neural Networks. Both the classifiers gave noteworthy results with great accuracy and least margin of error. Which suggests it can be used on real world data as well.
 
 
 ·Recommender Systems enable us for any given vector to find the best similarity, ranked in descending order, from the best match to the least best match   and for audio files this will be done by cosine similarity
@@ -81,7 +107,7 @@ The dataset consists of a collection of 10 genres with 100 audio files each, all
 ·Designed a pipeline and system to implement this approach and discussion on the system’s capabilities
 
 
-·Deploy the application using stream lit to demonstrate the prediction and recommendation results, dashboards including analysis
+·Deploy the application using stream lit to demonstrate the prediction and recommendation results
 
 
 
