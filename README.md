@@ -7,6 +7,11 @@
 **OVERVIEW**
  
 The digitization of music, as well as the emergence of online streaming platforms and mobile apps, has transformed how we consume music. Much of the music  we listen to nowadays is based on our personal preferences. Each person has their own musical taste and preferred genre based on a variety of factors. This sparked the idea for a music recommendation system to assist people in discovering music they enjoy based on what they've already heard.
+
+**WEB APPLICATION - HOSTED ON STREAMLIT**
+
+[https://share.streamlit.io/anveshvarma269/adm_music_recommendation_team2/main/app.py](https://share.streamlit.io/anveshvarma269/music-recommendation-and-genre-classification/main/app.py)
+
  
 **GOALS**
  
@@ -108,17 +113,4 @@ The dataset consists of a collection of 10 genres with 100 audio files each, all
 
 
 ·Deploy the application using stream lit to demonstrate the prediction and recommendation results
-
-
-
-**WEB APPLICATION - HOSTED ON STREAMLIT**
-
-https://share.streamlit.io/anveshvarma269/adm_music_recommendation_team2/main/app.py
-
-
-
-
-
-
-
 
