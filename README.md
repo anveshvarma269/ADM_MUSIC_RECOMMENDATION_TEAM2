@@ -10,7 +10,7 @@ The digitization of music, as well as the emergence of online streaming platform
 
 **WEB APPLICATION - HOSTED ON STREAMLIT**
 
-[https://share.streamlit.io/anveshvarma269/adm_music_recommendation_team2/main/app.py](https://share.streamlit.io/anveshvarma269/music-recommendation-and-genre-classification/main/app.py)
+[[https://share.streamlit.io/anveshvarma269/adm_music_recommendation_team2/main/app.py](https://share.streamlit.io/anveshvarma269/music-recommendation-and-genre-classification/main/app.py)](https://share.streamlit.io/anveshvarma269/music-recommendation-and-genre-classification/main/app.py)
 
  
 **GOALS**
